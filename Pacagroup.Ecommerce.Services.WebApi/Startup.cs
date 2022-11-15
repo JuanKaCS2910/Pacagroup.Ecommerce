@@ -13,6 +13,10 @@ using Pacagroup.Ecommerce.Infraestructura.Interface;
 using Pacagroup.Ecommerce.Infraestructura.Repository;
 using Pacagroup.Ecommerce.Transversal.Common;
 using Pacagroup.Ecommerce.Transversal.Mapper;
+using Swashbuckle.AspNetCore.Swagger;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace Pacagroup.Ecommerce.Services.WebApi
 {
@@ -40,6 +44,30 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             services.AddScoped<ICustomersDomain, CustomersDomain>();
             services.AddScoped<ICustomersRepository, CustomersRepository>();
 
+            services.AddSwaggerGen(c => 
+            {
+                c.SwaggerDoc("v1", new Info 
+                { 
+                    Version ="v1",
+                    Title ="Pacagroup Technology Services API Market",
+                    Description = "A simple example ASP.NET Core Web API",
+                    TermsOfService = "None",
+                    Contact = new Contact
+                    {
+                        Name ="Juan Castro",
+                        Email = "juan.castro.socla@gmail.com",
+                        Url="https://pacagroup.com"
+                    },
+                    License = new License
+                    {
+                        Name ="Use under LICX",
+                        Url ="https://example.com/license"
+                    }
+                });
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory,xmlFile);
+                c.IncludeXmlComments(xmlPath);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +77,16 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            //Enable middleware to serve swagger-ui (HTML, JS, CSS, etc)
+            //specifying the Swagger JSON endpoint
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Ecommerce V1");
+            });
 
             app.UseMvc();
         }
