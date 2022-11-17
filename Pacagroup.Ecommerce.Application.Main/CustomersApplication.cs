@@ -14,11 +14,13 @@ namespace Pacagroup.Ecommerce.Application.Main
     {
         private readonly ICustomersDomain _customersDomain;
         private readonly IMapper _mapper;
+        private readonly IAppLogger<CustomersApplication> _logger;
 
-        public CustomersApplication(ICustomersDomain customersDomain, IMapper mapper)
+        public CustomersApplication(ICustomersDomain customersDomain, IMapper mapper, IAppLogger<CustomersApplication> logger)
         {
             this._customersDomain = customersDomain;
             this._mapper = mapper;
+            this._logger = logger;
         }
 
         #region Método Síncronos
@@ -108,11 +110,13 @@ namespace Pacagroup.Ecommerce.Application.Main
                 {
                     response.IsSuccess = true;
                     response.Message = "Consulta Exitosa!!!";
+                    _logger.LogInformation("Consulta Exitosa!!!");
                 }
             }
             catch (Exception ex)
             {
                 response.Message = ex.Message;
+                _logger.LogError("Error : " + ex.Message);
             }
             return response;
         }
