@@ -25,6 +25,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace Pacagroup.Ecommerce.Services.WebApi
 {
@@ -124,41 +125,57 @@ namespace Pacagroup.Ecommerce.Services.WebApi
 
             services.AddSwaggerGen(c => 
             {
-                c.SwaggerDoc("v1", new Info 
+                c.SwaggerDoc("v1", new OpenApiInfo 
                 { 
                     Version ="v1",
                     Title ="Pacagroup Technology Services API Market",
                     Description = "A simple example ASP.NET Core Web API",
-                    TermsOfService = "None",
-                    Contact = new Contact
+                    TermsOfService = new Uri("https://pacagroup.com/terms"),
+                    Contact = new OpenApiContact
                     {
                         Name ="Juan Castro",
                         Email = "juan.castro.socla@gmail.com",
-                        Url="https://pacagroup.com"
+                        Url= new Uri("https://pacagroup.com/contact")
                     },
-                    License = new License
+                    License = new OpenApiLicense
                     {
                         Name ="Use under LICX",
-                        Url ="https://example.com/license"
+                        Url = new Uri("https://pacagroup.com/license")
                     }
                 });
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory,xmlFile);
                 c.IncludeXmlComments(xmlPath);
 
-                c.AddSecurityDefinition("Authorization", new ApiKeyScheme
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Description ="Authorization by API Key",
-                    In = "header",
-                    Type = "apiKey",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
                     Name = "Authorization"
                 });
 
+                //Seguridad OAuth 2 a nuestra aplicación.
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[]{ }
+                    }
+                });
+
+                /*
                 c.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>>
                 {
                     {"Authorization", new string[0] }
                 });
-
+                */
             });
         }
 
