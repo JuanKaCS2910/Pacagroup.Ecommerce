@@ -24,6 +24,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
 
 namespace Pacagroup.Ecommerce.Services.WebApi
 {
@@ -40,17 +41,26 @@ namespace Pacagroup.Ecommerce.Services.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper(x => x.AddProfile(new MappingsProfile()));
+            //AutoMapperConfiguration
+            var mappingConfig = new MapperConfiguration(mc => 
+            {
+                mc.AddProfile(new MappingsProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
             services.AddCors(options => options.AddPolicy(myPolicy, builder =>
                                         builder.WithOrigins(Configuration["Config:OriginCors"])
                                                .AllowAnyHeader()
                                                .AllowAnyMethod()));
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            /*
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddJsonOptions(options => {
                     options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
                 });
-
+            */
             var appSettingsSection = Configuration.GetSection("Config");
             services.Configure<AppSettings>(appSettingsSection);
 
@@ -153,16 +163,18 @@ namespace Pacagroup.Ecommerce.Services.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRouting();
+
             //Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
-
+            
             //Enable middleware to serve swagger-ui (HTML, JS, CSS, etc)
             //specifying the Swagger JSON endpoint
             app.UseSwaggerUI(c =>
@@ -172,7 +184,12 @@ namespace Pacagroup.Ecommerce.Services.WebApi
 
             app.UseCors(myPolicy);
             app.UseAuthentication();
-            app.UseMvc();
+            //app.UseMvc(); 'Se comenta porque se encuentra deprecado.
+            app.UseAuthorization();
+            app.UseEndpoints(endpoints => 
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
