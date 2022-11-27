@@ -1,12 +1,12 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using Pacagroup.Ecommerce.Application.DTO;
 using Pacagroup.Ecommerce.Application.Interface;
 using Pacagroup.Ecommerce.Domain.Entity;
 using Pacagroup.Ecommerce.Domain.Interface;
 using Pacagroup.Ecommerce.Transversal.Common;
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Pacagroup.Ecommerce.Application.Main
 {
@@ -15,53 +15,55 @@ namespace Pacagroup.Ecommerce.Application.Main
         private readonly ICustomersDomain _customersDomain;
         private readonly IMapper _mapper;
         private readonly IAppLogger<CustomersApplication> _logger;
-
         public CustomersApplication(ICustomersDomain customersDomain, IMapper mapper, IAppLogger<CustomersApplication> logger)
         {
-            this._customersDomain = customersDomain;
-            this._mapper = mapper;
-            this._logger = logger;
+            _customersDomain = customersDomain;
+            _mapper = mapper;
+            _logger = logger;
         }
 
-        #region Método Síncronos
+        #region Métodos Síncronos
+
         public Response<bool> Insert(CustomersDto customersDto)
         {
             var response = new Response<bool>();
             try
             {
-                var customers = _mapper.Map<Customers>(customersDto);
-                response.Data = _customersDomain.Insert(customers);
+                var customer = _mapper.Map<Customers>(customersDto);
+                response.Data = _customersDomain.Insert(customer);
                 if (response.Data)
                 {
                     response.IsSuccess = true;
                     response.Message = "Registro Exitoso!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
+
         public Response<bool> Update(CustomersDto customersDto)
         {
             var response = new Response<bool>();
             try
             {
-                var customers = _mapper.Map<Customers>(customersDto);
-                response.Data = _customersDomain.Update(customers);
+                var customer = _mapper.Map<Customers>(customersDto);
+                response.Data = _customersDomain.Update(customer);
                 if (response.Data)
                 {
                     response.IsSuccess = true;
                     response.Message = "Actualización Exitosa!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
+
         public Response<bool> Delete(string customerId)
         {
             var response = new Response<bool>();
@@ -74,12 +76,13 @@ namespace Pacagroup.Ecommerce.Application.Main
                     response.Message = "Eliminación Exitosa!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
+
         public Response<CustomersDto> Get(string customerId)
         {
             var response = new Response<CustomersDto>();
@@ -93,12 +96,13 @@ namespace Pacagroup.Ecommerce.Application.Main
                     response.Message = "Consulta Exitosa!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
+
         public Response<IEnumerable<CustomersDto>> GetAll()
         {
             var response = new Response<IEnumerable<CustomersDto>>();
@@ -113,32 +117,33 @@ namespace Pacagroup.Ecommerce.Application.Main
                     _logger.LogInformation("Consulta Exitosa!!!");
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
-                _logger.LogError("Error : " + ex.Message);
+                response.Message = e.Message;
+                _logger.LogError(e.Message);
             }
             return response;
         }
+
         #endregion
 
-        #region Método Asyncrono
+        #region Métodos Asíncronos
         public async Task<Response<bool>> InsertAsync(CustomersDto customersDto)
         {
             var response = new Response<bool>();
             try
             {
-                var customers = _mapper.Map<Customers>(customersDto);
-                response.Data = await _customersDomain.InsertAsync(customers);
+                var customer = _mapper.Map<Customers>(customersDto);
+                response.Data = await _customersDomain.InsertAsync(customer);
                 if (response.Data)
                 {
                     response.IsSuccess = true;
                     response.Message = "Registro Exitoso!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
@@ -147,20 +152,21 @@ namespace Pacagroup.Ecommerce.Application.Main
             var response = new Response<bool>();
             try
             {
-                var customers = _mapper.Map<Customers>(customersDto);
-                response.Data = await _customersDomain.UpdateAsync(customers);
+                var customer = _mapper.Map<Customers>(customersDto);
+                response.Data = await _customersDomain.UpdateAsync(customer);
                 if (response.Data)
                 {
                     response.IsSuccess = true;
                     response.Message = "Actualización Exitosa!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
+
         public async Task<Response<bool>> DeleteAsync(string customerId)
         {
             var response = new Response<bool>();
@@ -173,12 +179,13 @@ namespace Pacagroup.Ecommerce.Application.Main
                     response.Message = "Eliminación Exitosa!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
+
         public async Task<Response<CustomersDto>> GetAsync(string customerId)
         {
             var response = new Response<CustomersDto>();
@@ -192,9 +199,9 @@ namespace Pacagroup.Ecommerce.Application.Main
                     response.Message = "Consulta Exitosa!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
@@ -211,13 +218,12 @@ namespace Pacagroup.Ecommerce.Application.Main
                     response.Message = "Consulta Exitosa!!!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                response.Message = ex.Message;
+                response.Message = e.Message;
             }
             return response;
         }
         #endregion
-
     }
 }

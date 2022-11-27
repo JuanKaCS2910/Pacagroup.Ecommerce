@@ -1,0 +1,13 @@
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.deps.json
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.dll
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.pdb
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Domain.Entity.dll
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Domain.Entity.pdb
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.csproj.AssemblyReference.cache
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.GeneratedMSBuildEditorConfig.editorconfig
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.AssemblyInfoInputs.cache
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.AssemblyInfo.cs
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.csproj.CoreCompileInputs.cache
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.csproj.CopyComplete
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.dll
+F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Interface.pdb

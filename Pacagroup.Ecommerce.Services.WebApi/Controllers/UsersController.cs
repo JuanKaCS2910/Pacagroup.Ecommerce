@@ -21,10 +21,10 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
         private readonly IUsersApplication _usersApplication;
         private readonly AppSettings _appSettings;
 
-        public UsersController(IUsersApplication usersApplication, IOptions<AppSettings> appSettings)
+        public UsersController(IUsersApplication authApplication, IOptions<AppSettings> appSettings)
         {
-            this._usersApplication = usersApplication;
-            this._appSettings = appSettings.Value;
+            _usersApplication = authApplication;
+            _appSettings = appSettings.Value;
         }
 
         [AllowAnonymous]
@@ -42,6 +42,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
                 else
                     return NotFound(response.Message);
             }
+
             return BadRequest(response.Message);
         }
 
@@ -56,16 +57,13 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
                     new Claim(ClaimTypes.Name, usersDto.Data.UserId.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256Signature),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                 Issuer = _appSettings.Issuer,
                 Audience = _appSettings.Audience
             };
-
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenstring = tokenHandler.WriteToken(token);
-            return tokenstring;
-
+            var tokenString = tokenHandler.WriteToken(token);
+            return tokenString;
         }
-
     }
 }

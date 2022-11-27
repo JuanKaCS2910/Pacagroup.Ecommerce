@@ -1,29 +1,32 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using AutoMapper;
+using Pacagroup.Ecommerce.Transversal.Mapper;
+using Pacagroup.Ecommerce.Transversal.Common;
+using Pacagroup.Ecommerce.Infrastructure.Data;
+using Pacagroup.Ecommerce.Infrastructure.Repository;
+using Pacagroup.Ecommerce.Infrastructure.Interface;
+using Pacagroup.Ecommerce.Domain.Interface;
+using Pacagroup.Ecommerce.Domain.Core;
 using Pacagroup.Ecommerce.Application.Interface;
 using Pacagroup.Ecommerce.Application.Main;
-using Pacagroup.Ecommerce.Domain.Core;
-using Pacagroup.Ecommerce.Domain.Interface;
-using Pacagroup.Ecommerce.Infraestructura.Data;
-using Pacagroup.Ecommerce.Infraestructura.Interface;
-using Pacagroup.Ecommerce.Infraestructura.Repository;
-using Pacagroup.Ecommerce.Services.WebApi.Helpers;
-using Pacagroup.Ecommerce.Transversal.Common;
 using Pacagroup.Ecommerce.Transversal.Logging;
-using Pacagroup.Ecommerce.Transversal.Mapper;
 using Swashbuckle.AspNetCore.Swagger;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
+using System.IO;
+using Pacagroup.Ecommerce.Services.WebApi.Helpers;
 using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
@@ -42,30 +45,23 @@ namespace Pacagroup.Ecommerce.Services.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //AutoMapperConfiguration
-            var mappingConfig = new MapperConfiguration(mc => 
+            // Auto Mapper Configurations
+            var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingsProfile());
             });
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
-            services.AddCors(options => options.AddPolicy(myPolicy, builder =>
-                                        builder.WithOrigins(Configuration["Config:OriginCors"])
-                                               .AllowAnyHeader()
-                                               .AllowAnyMethod()));
+            services.AddCors(options => options.AddPolicy(myPolicy, builder => builder.WithOrigins(Configuration["Config:OriginCors"])
+                                                                                        .AllowAnyHeader()
+                                                                                        .AllowAnyMethod()));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);                
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
-            /*
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-                .AddJsonOptions(options => {
-                    options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
-                });
-            */
             var appSettingsSection = Configuration.GetSection("Config");
             services.Configure<AppSettings>(appSettingsSection);
 
-            //configure jwt authenticate
+            // configure jwt authentication
             var appSettings = appSettingsSection.Get<AppSettings>();
 
             services.AddSingleton<IConfiguration>(Configuration);
@@ -73,11 +69,9 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             services.AddScoped<ICustomersApplication, CustomersApplication>();
             services.AddScoped<ICustomersDomain, CustomersDomain>();
             services.AddScoped<ICustomersRepository, CustomersRepository>();
-
             services.AddScoped<IUsersApplication, UsersApplication>();
             services.AddScoped<IUsersDomain, UsersDomain>();
             services.AddScoped<IUsersRepository, UsersRepository>();
-
             services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
 
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
@@ -123,39 +117,40 @@ namespace Pacagroup.Ecommerce.Services.WebApi
                 };
             });
 
-            services.AddSwaggerGen(c => 
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo 
-                { 
-                    Version ="v1",
-                    Title ="Pacagroup Technology Services API Market",
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Pacagroup Technology Services API Market",
                     Description = "A simple example ASP.NET Core Web API",
                     TermsOfService = new Uri("https://pacagroup.com/terms"),
                     Contact = new OpenApiContact
                     {
-                        Name ="Juan Castro",
-                        Email = "juan.castro.socla@gmail.com",
-                        Url= new Uri("https://pacagroup.com/contact")
+                        Name = "Alex Espejo",
+                        Email = "alex.espejo.c@gmail.com",
+                        Url = new Uri("https://pacagroup.com/contact")
                     },
                     License = new OpenApiLicense
                     {
-                        Name ="Use under LICX",
-                        Url = new Uri("https://pacagroup.com/license")
+                        Name = "Use under LICX",
+                        Url = new Uri("https://pacagroup.com/licence")
                     }
                 });
+                // Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory,xmlFile);
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Description ="Authorization by API Key",
+                    Description = "Authorization by API key.",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey,
                     Name = "Authorization"
                 });
 
-                //Seguridad OAuth 2 a nuestra aplicación.
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement {
                     {
                         new OpenApiSecurityScheme
@@ -169,13 +164,6 @@ namespace Pacagroup.Ecommerce.Services.WebApi
                         new string[]{ }
                     }
                 });
-
-                /*
-                c.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>>
-                {
-                    {"Authorization", new string[0] }
-                });
-                */
             });
         }
 
@@ -188,12 +176,11 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             }
 
             app.UseRouting();
-
-            //Enable middleware to serve generated Swagger as a JSON endpoint.
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
-            
-            //Enable middleware to serve swagger-ui (HTML, JS, CSS, etc)
-            //specifying the Swagger JSON endpoint
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+            // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Ecommerce V1");
@@ -201,9 +188,8 @@ namespace Pacagroup.Ecommerce.Services.WebApi
 
             app.UseCors(myPolicy);
             app.UseAuthentication();
-            //app.UseMvc(); 'Se comenta porque se encuentra deprecado.
             app.UseAuthorization();
-            app.UseEndpoints(endpoints => 
+            app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });

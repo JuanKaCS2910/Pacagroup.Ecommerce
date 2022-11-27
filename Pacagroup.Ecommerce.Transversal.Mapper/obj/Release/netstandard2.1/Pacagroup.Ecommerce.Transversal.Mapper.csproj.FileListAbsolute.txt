@@ -1,0 +1,14 @@
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.deps.json
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.pdb
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Application.DTO.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Domain.Entity.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Application.DTO.pdb
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Domain.Entity.pdb
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.csprojAssemblyReference.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.AssemblyInfoInputs.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.AssemblyInfo.cs
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.csproj.CoreCompileInputs.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.csproj.CopyComplete
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Mapper\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Mapper.pdb

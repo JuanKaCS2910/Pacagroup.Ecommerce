@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Td/NANZLQbOqyK2/DCFRkLKCiJ6OnNAWAMECsrRTMEAVnkoeBZiQ7Ea5qjTaXZugiqStLbq3BpMrSWy9wE37Hg==",
+  "success": true,
+  "projectFilePath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Application.Main\\Pacagroup.Ecommerce.Application.Main.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

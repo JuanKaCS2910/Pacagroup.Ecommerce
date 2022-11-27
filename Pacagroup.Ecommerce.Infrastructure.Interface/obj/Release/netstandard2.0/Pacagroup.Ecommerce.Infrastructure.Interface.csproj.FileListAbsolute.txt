@@ -1,0 +1,12 @@
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.deps.json
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.pdb
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Release\netstandard2.0\Pacagroup.Ecommerce.Domain.Entity.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\bin\Release\netstandard2.0\Pacagroup.Ecommerce.Domain.Entity.pdb
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.csprojAssemblyReference.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.AssemblyInfoInputs.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.AssemblyInfo.cs
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.csproj.CoreCompileInputs.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.csproj.CopyComplete
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Interface\obj\Release\netstandard2.0\Pacagroup.Ecommerce.Infrastructure.Interface.pdb

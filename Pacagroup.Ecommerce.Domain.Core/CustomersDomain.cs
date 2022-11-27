@@ -1,26 +1,27 @@
-﻿using Pacagroup.Ecommerce.Domain.Entity;
+﻿using System;
+using Pacagroup.Ecommerce.Domain.Entity;
 using Pacagroup.Ecommerce.Domain.Interface;
-using Pacagroup.Ecommerce.Infraestructura.Interface;
-using System;
-using System.Collections.Generic;
+using Pacagroup.Ecommerce.Infrastructure.Interface;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Pacagroup.Ecommerce.Domain.Core
 {
     public class CustomersDomain : ICustomersDomain
     {
         private readonly ICustomersRepository _customersRepository;
-
         public CustomersDomain(ICustomersRepository customersRepository)
         {
-            this._customersRepository = customersRepository;
+            _customersRepository = customersRepository;
         }
 
         #region Métodos Síncronos
+
         public bool Insert(Customers customers)
         {
             return _customersRepository.Insert(customers);
         }
+
         public bool Update(Customers customers)
         {
             return _customersRepository.Update(customers);
@@ -35,6 +36,7 @@ namespace Pacagroup.Ecommerce.Domain.Core
         {
             return _customersRepository.Get(customerId);
         }
+
         public IEnumerable<Customers> GetAll()
         {
             return _customersRepository.GetAll();
@@ -42,12 +44,13 @@ namespace Pacagroup.Ecommerce.Domain.Core
 
         #endregion
 
-        #region Métodos Asyncronos
+        #region Métodos Asíncronos
 
         public async Task<bool> InsertAsync(Customers customers)
         {
             return await _customersRepository.InsertAsync(customers);
         }
+
         public async Task<bool> UpdateAsync(Customers customers)
         {
             return await _customersRepository.UpdateAsync(customers);
@@ -62,12 +65,12 @@ namespace Pacagroup.Ecommerce.Domain.Core
         {
             return await _customersRepository.GetAsync(customerId);
         }
+
         public async Task<IEnumerable<Customers>> GetAllAsync()
         {
             return await _customersRepository.GetAllAsync();
         }
 
         #endregion
-
     }
 }

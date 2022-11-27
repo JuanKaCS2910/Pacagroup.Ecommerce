@@ -1,0 +1,12 @@
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.deps.json
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.pdb
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Common.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\bin\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Common.pdb
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.csprojAssemblyReference.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.AssemblyInfoInputs.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.AssemblyInfo.cs
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.csproj.CoreCompileInputs.cache
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.csproj.CopyComplete
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.dll
+D:\workspace\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Transversal.Logging\obj\Release\netstandard2.1\Pacagroup.Ecommerce.Transversal.Logging.pdb
