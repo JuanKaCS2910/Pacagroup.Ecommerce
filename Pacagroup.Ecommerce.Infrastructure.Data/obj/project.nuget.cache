@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w0rtGuBWvaxSOSmSi2ZEYbjpWtBq2zpY6CqYgE1cUsM6XoldendJK+iPf6CCddy2hOCoR53b9NyJeyfUIW974Q==",
+  "dgSpecHash": "zBLhM7yBPYhezJ4JHTQOzqRm861mImvwYT5Md8CfFYTRALpMHiDAWbQytSP3Cl1kKauJpb13aIkBSFfq0jWB0g==",
   "success": true,
   "projectFilePath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Infrastructure.Data\\Pacagroup.Ecommerce.Infrastructure.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\10.0.4\\fluentvalidation.10.0.4.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",

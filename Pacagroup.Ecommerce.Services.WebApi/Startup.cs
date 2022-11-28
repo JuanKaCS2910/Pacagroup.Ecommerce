@@ -8,6 +8,7 @@ using Pacagroup.Ecommerce.Services.WebApi.Modules.Feature;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Injection;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Mapper;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Swagger;
+using Pacagroup.Ecommerce.Services.WebApi.Modules.Validator;
 
 namespace Pacagroup.Ecommerce.Services.WebApi
 {
@@ -29,6 +30,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             services.AddInjection(this.Configuration);//Injection Extensiones
             services.AddAuthentication(this.Configuration);//Authentication Extensiones
             services.AddSwagger();//SwaggerExtensiones
+            services.AddValidator();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

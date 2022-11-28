@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zbkYOGen3rapncE+HrzEs+sd9Pqb5XJw6Ys6Gc0pMSQJTwJ7829+QWr5WSBRZo/MNJIoXVSDKNpfRCIqvkjREQ==",
+  "dgSpecHash": "QDtgvTk9r8TylfQFUK3u6958ytBBOP21pehgaw51sdNW51v2280ed8YU9cRkKtWxMQChAiOY9fFEgiSuxFttiQ==",
   "success": true,
   "projectFilePath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Logging\\Pacagroup.Ecommerce.Transversal.Logging.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\10.0.4\\fluentvalidation.10.0.4.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",

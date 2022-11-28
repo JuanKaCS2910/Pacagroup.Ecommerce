@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Pacagroup.Ecommerce.Application.DTO;
 using Pacagroup.Ecommerce.Application.Interface;
+using Pacagroup.Ecommerce.Application.Validator;
 using Pacagroup.Ecommerce.Domain.Interface;
 using Pacagroup.Ecommerce.Transversal.Common;
 using System;
@@ -11,18 +12,23 @@ namespace Pacagroup.Ecommerce.Application.Main
     {
         private readonly IUsersDomain _usersDomain;
         private readonly IMapper _mapper;
+        private readonly UsersDtoValidator _usersDtoValidator;
 
-        public UsersApplication(IUsersDomain usersDomain, IMapper iMapper)
+        public UsersApplication(IUsersDomain usersDomain, IMapper iMapper, UsersDtoValidator usersDtoValidator)
         {
             _usersDomain = usersDomain;
             _mapper = iMapper;
-        }
+            _usersDtoValidator = usersDtoValidator;
+    }
         public Response<UsersDto> Authenticate(string username, string password)
         {
             var response = new Response<UsersDto>();
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            var validation = _usersDtoValidator.Validate(new UsersDto() { UserName = username, Password = password });
+
+            if (!validation.IsValid)
             {
-                response.Message = "Parámetros no pueden ser vacios.";
+                response.Message = "Errores de validación";
+                response.Errors = validation.Errors;
                 return response;
             }
             try
