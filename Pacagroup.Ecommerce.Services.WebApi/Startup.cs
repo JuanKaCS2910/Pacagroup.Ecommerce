@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Authentication;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Feature;
+using Pacagroup.Ecommerce.Services.WebApi.Modules.HealthCheck;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Injection;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Mapper;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Swagger;
@@ -34,6 +36,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             services.AddVersioning(); // Versioning Extensiones
             services.AddSwagger();//SwaggerExtensiones
             services.AddValidator();
+            services.AddHealthCheck(this.Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,6 +72,12 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecksUI();
+                endpoints.MapHealthChecks("/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions 
+                { 
+                    Predicate = _ => true, //En caso desee agregar filtros.
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
             });
         }
     }

@@ -194,7 +194,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[11.0.1, )"
             }
           },
           "imports": [
@@ -264,11 +264,11 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[10.3.4, )"
+              "version": "[11.1.0, )"
             },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
-              "version": "[10.3.4, )"
+              "version": "[11.1.0, )"
             }
           },
           "imports": [
@@ -458,7 +458,7 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[10.3.4, )"
+              "version": "[11.1.0, )"
             }
           },
           "imports": [

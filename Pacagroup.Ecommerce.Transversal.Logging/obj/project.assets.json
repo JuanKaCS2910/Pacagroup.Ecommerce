@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "FluentValidation/10.3.4": {
+      "FluentValidation/11.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FluentValidation.dll": {}
@@ -149,7 +149,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "FluentValidation": "10.3.4"
+          "FluentValidation": "11.1.0"
         },
         "compile": {
           "bin/placeholder/Pacagroup.Ecommerce.Transversal.Common.dll": {}
@@ -161,18 +161,21 @@
     }
   },
   "libraries": {
-    "FluentValidation/10.3.4": {
-      "sha512": "hsGRtnhTlCrRbxIOkKp6rCBtkq3UV0i31ckcJtd5j1i99zqLgbQGcbxK0SMU63DIto94f++uIdRpoycu8ySnDQ==",
+    "FluentValidation/11.1.0": {
+      "sha512": "Ld7w+2jOmnhQqFkngEGuEWTRa5j6u4Xzli7jKxRtbA5PtuHHcpin01qxvxYL0LomeJuzRMGAOURu2rKONdjKQA==",
       "type": "package",
-      "path": "fluentvalidation/10.3.4",
+      "path": "fluentvalidation/11.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.10.3.4.nupkg.sha512",
+        "fluentvalidation.11.1.0.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
         "lib/netstandard2.0/FluentValidation.xml",
         "lib/netstandard2.1/FluentValidation.dll",

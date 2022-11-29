@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LlUPAr/33vNEovqKiWnA+mnnV9jvAC5VA8Poa2CYo7HywK6pfZG5Nkahr6lAw45lOZzxsUD+QL+yP5cFgV8e4w==",
+  "dgSpecHash": "IsF4pvE2S7yYh+3ceDbfOKwPsjGIxt7BHhFvj/cMIA+cuBF+PHx7/rSifHzm+ZHR0IwsN/ffcm2+fVMI6GYUcg==",
   "success": true,
   "projectFilePath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512"
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512"
   ],
   "logs": []
 }
