@@ -4,11 +4,12 @@ using Pacagroup.Ecommerce.Application.DTO;
 using Pacagroup.Ecommerce.Application.Interface;
 using System.Threading.Tasks;
 
-namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
+namespace Pacagroup.Ecommerce.Services.WebApi.Controllers.v1
 {
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class CustomersController : Controller
     {
         private readonly ICustomersApplication _customersApplication;
@@ -20,7 +21,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
         #region "Métodos Sincronos"
 
         [HttpPost("Insert")]
-        public IActionResult Insert([FromBody]CustomersDto customersDto)
+        public IActionResult Insert([FromBody] CustomersDto customersDto)
         {
             if (customersDto == null)
                 return BadRequest();
@@ -32,7 +33,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
         }
 
         [HttpPut("Update")]
-        public IActionResult Update([FromBody]CustomersDto customersDto)
+        public IActionResult Update([FromBody] CustomersDto customersDto)
         {
             if (customersDto == null)
                 return BadRequest();
@@ -81,7 +82,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
         #region "Métodos Asincronos"
 
         [HttpPost("InsertAsync")]
-        public async Task<IActionResult> InsertAsync([FromBody]CustomersDto customersDto)
+        public async Task<IActionResult> InsertAsync([FromBody] CustomersDto customersDto)
         {
             if (customersDto == null)
                 return BadRequest();
@@ -93,7 +94,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Controllers
         }
 
         [HttpPut("UpdateAsync")]
-        public async Task<IActionResult> UpdateAsync([FromBody]CustomersDto customersDto)
+        public async Task<IActionResult> UpdateAsync([FromBody] CustomersDto customersDto)
         {
             if (customersDto == null)
                 return BadRequest();

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +10,7 @@ using Pacagroup.Ecommerce.Services.WebApi.Modules.Injection;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Mapper;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Swagger;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Validator;
+using Pacagroup.Ecommerce.Services.WebApi.Modules.Versioning;
 
 namespace Pacagroup.Ecommerce.Services.WebApi
 {
@@ -29,12 +31,13 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             services.AddFeature(this.Configuration);//Feature Extensiones
             services.AddInjection(this.Configuration);//Injection Extensiones
             services.AddAuthentication(this.Configuration);//Authentication Extensiones
+            services.AddVersioning(); // Versioning Extensiones
             services.AddSwagger();//SwaggerExtensiones
             services.AddValidator();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
             if (env.IsDevelopment())
             {
@@ -49,7 +52,15 @@ namespace Pacagroup.Ecommerce.Services.WebApi
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Ecommerce V1");
+                #region Comentado
+                //c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Ecommerce V1");
+                #endregion
+
+                //build a swagger endpoint for each discovered API Version
+                foreach (var description in provider.ApiVersionDescriptions)
+                {
+                    c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                }
             });
 
             app.UseCors(myPolicy);
