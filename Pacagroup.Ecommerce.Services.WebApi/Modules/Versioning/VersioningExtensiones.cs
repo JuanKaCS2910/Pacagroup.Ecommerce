@@ -13,12 +13,14 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Modules.Versioning
                 o.AssumeDefaultVersionWhenUnspecified = true;
                 o.ReportApiVersions = true;
                 //o.ApiVersionReader = new QueryStringApiVersionReader("api-version"); //Para QueryString
-                o.ApiVersionReader = new HeaderApiVersionReader("x-version");
+                //o.ApiVersionReader = new HeaderApiVersionReader("x-version"); //Para Headers.
+                o.ApiVersionReader = new UrlSegmentApiVersionReader();
             });
 
             services.AddVersionedApiExplorer(options =>
             {
                 options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
             });
 
             return services;
