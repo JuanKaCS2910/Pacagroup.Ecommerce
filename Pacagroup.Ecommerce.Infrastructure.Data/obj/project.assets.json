@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "FluentValidation/11.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/FluentValidation.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/FluentValidation.dll": {}
-        }
-      },
       "Microsoft.Extensions.Configuration/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -240,44 +231,10 @@
             "rid": "win"
           }
         }
-      },
-      "Pacagroup.Ecommerce.Transversal.Common/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "FluentValidation": "11.1.0"
-        },
-        "compile": {
-          "bin/placeholder/Pacagroup.Ecommerce.Transversal.Common.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Pacagroup.Ecommerce.Transversal.Common.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "FluentValidation/11.1.0": {
-      "sha512": "Ld7w+2jOmnhQqFkngEGuEWTRa5j6u4Xzli7jKxRtbA5PtuHHcpin01qxvxYL0LomeJuzRMGAOURu2rKONdjKQA==",
-      "type": "package",
-      "path": "fluentvalidation/11.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "fluent-validation-icon.png",
-        "fluentvalidation.11.1.0.nupkg.sha512",
-        "fluentvalidation.nuspec",
-        "lib/net5.0/FluentValidation.dll",
-        "lib/net5.0/FluentValidation.xml",
-        "lib/net6.0/FluentValidation.dll",
-        "lib/net6.0/FluentValidation.xml",
-        "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml",
-        "lib/netstandard2.1/FluentValidation.dll",
-        "lib/netstandard2.1/FluentValidation.xml"
-      ]
-    },
     "Microsoft.Extensions.Configuration/6.0.1": {
       "sha512": "BUyFU9t+HzlSE7ri4B+AQN2BgTgHv/uM82s5ZkgU1BApyzWzIl48nDsG5wR1t0pniNuuyTBzG3qCW8152/NtSw==",
       "type": "package",
@@ -820,17 +777,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Pacagroup.Ecommerce.Transversal.Common/1.0.0": {
-      "type": "project",
-      "path": "../Pacagroup.Ecommerce.Transversal.Common/Pacagroup.Ecommerce.Transversal.Common.csproj",
-      "msbuildProject": "../Pacagroup.Ecommerce.Transversal.Common/Pacagroup.Ecommerce.Transversal.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Microsoft.Extensions.Configuration >= 6.0.1",
-      "Pacagroup.Ecommerce.Transversal.Common >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -868,11 +819,7 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {
-            "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj": {
-              "projectPath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
