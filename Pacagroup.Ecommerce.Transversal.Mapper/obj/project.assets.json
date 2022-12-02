@@ -2,25 +2,33 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "AutoMapper/11.0.1": {
+      "AutoMapper/12.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0"
         },
         "compile": {
-          "lib/netstandard2.1/AutoMapper.dll": {}
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.1/AutoMapper.dll": {}
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/Microsoft.CSharp.dll": {}
+          "ref/netstandard2.0/Microsoft.CSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.CSharp.dll": {}
+          "lib/netstandard2.0/Microsoft.CSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Pacagroup.Ecommerce.Application.DTO/1.0.0": {
@@ -46,15 +54,15 @@
     }
   },
   "libraries": {
-    "AutoMapper/11.0.1": {
-      "sha512": "WIadGC1pIwbnyTubvI577p3F++Bsj9q2Q3OaAc1I0QS+JhupN1xkdrPBhI9bPIeg63zM81tZplUNYkqU1HE5jQ==",
+    "AutoMapper/12.0.0": {
+      "sha512": "0Rmg0zI5AFu1O/y//o9VGyhxKjhggWpk9mOA1tp0DEVx40c61bs+lnQv+0jUq8XbniF7FKgIVvI1perqiMtLrA==",
       "type": "package",
-      "path": "automapper/11.0.1",
+      "path": "automapper/12.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "automapper.11.0.1.nupkg.sha512",
+        "automapper.12.0.0.nupkg.sha512",
         "automapper.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.dll",
@@ -143,7 +151,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "AutoMapper >= 11.0.1",
+      "AutoMapper >= 12.0.0",
       "Pacagroup.Ecommerce.Application.DTO >= 1.0.0",
       "Pacagroup.Ecommerce.Domain.Entity >= 1.0.0"
     ]
@@ -204,7 +212,7 @@
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
-            "version": "[11.0.1, )"
+            "version": "[12.0.0, )"
           }
         },
         "imports": [
@@ -213,7 +221,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -222,7 +231,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

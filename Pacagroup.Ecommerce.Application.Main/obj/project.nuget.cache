@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BevoOc462zBKcfdk1KaBi7v5MPfg+YZmQuoQCABuKXIrRCLd1voVxFToiYgFXFREzJ1ZeqOK+21ZBe3+faZxzQ==",
+  "dgSpecHash": "0vqvJ8G5+jnsoRn6k8L6LiElkvJzczrO+eWgItsxLNop0O8ynHMTgxT3AisvXxly4VvUAYGboC0zWzpGhJLQuQ==",
   "success": true,
   "projectFilePath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Application.Main\\Pacagroup.Ecommerce.Application.Main.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Asus\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
   ],

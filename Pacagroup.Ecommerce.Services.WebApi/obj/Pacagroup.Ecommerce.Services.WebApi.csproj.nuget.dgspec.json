@@ -51,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -118,7 +119,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -127,7 +129,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -194,7 +196,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[12.0.0, )"
             }
           },
           "imports": [
@@ -203,7 +205,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -212,7 +215,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -264,11 +267,11 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[10.3.4, )"
+              "version": "[11.4.0, )"
             },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
-              "version": "[10.3.4, )"
+              "version": "[11.4.0, )"
             }
           },
           "imports": [
@@ -277,7 +280,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -286,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -347,7 +351,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -356,7 +361,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -407,7 +412,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -416,7 +422,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -471,7 +477,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -480,7 +487,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -513,11 +520,7 @@
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
-            "projectReferences": {
-              "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj": {
-                "projectPath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -532,11 +535,11 @@
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.3, )"
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
@@ -545,7 +548,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -554,7 +558,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -609,7 +613,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -618,7 +623,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -657,9 +662,6 @@
               },
               "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Infrastructure.Interface\\Pacagroup.Ecommerce.Infrastructure.Interface.csproj": {
                 "projectPath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Infrastructure.Interface\\Pacagroup.Ecommerce.Infrastructure.Interface.csproj"
-              },
-              "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj": {
-                "projectPath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj"
               }
             }
           }
@@ -685,7 +687,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -694,7 +697,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -718,15 +721,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
               "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Application.DTO\\Pacagroup.Ecommerce.Application.DTO.csproj": {
                 "projectPath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Application.DTO\\Pacagroup.Ecommerce.Application.DTO.csproj"
@@ -777,20 +780,36 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "AspNetCore.HealthChecks.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "AspNetCore.HealthChecks.UI": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "AspNetCore.HealthChecks.UI.InMemory.Storage": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[12.0.0, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.1.1, )"
+              "version": "[12.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.AspNetCore.Mvc.Versioning": {
               "target": "Package",
@@ -802,35 +821,35 @@
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[6.14.1, )"
+              "version": "[6.25.1, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
-              "version": "[1.14.0, )"
+              "version": "[1.17.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             },
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.14.1, )"
+              "version": "[6.25.1, )"
             }
           },
           "imports": [
@@ -839,7 +858,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -851,7 +871,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -899,7 +919,7 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[10.3.4, )"
+              "version": "[11.4.0, )"
             }
           },
           "imports": [
@@ -908,7 +928,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -917,7 +938,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -941,15 +962,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
               "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj": {
                 "projectPath": "F:\\Udemy\\Arquitectura\\Pacagroup.Ecommerce\\Pacagroup.Ecommerce.Transversal.Common\\Pacagroup.Ecommerce.Transversal.Common.csproj"
@@ -964,12 +985,16 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.Extensions.Logging": {
+            "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.0, )"
+            },
+            "WatchDog.NET": {
+              "target": "Package",
+              "version": "[1.3.2, )"
             }
           },
           "imports": [
@@ -978,16 +1003,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1042,7 +1068,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[12.0.0, )"
             }
           },
           "imports": [
@@ -1051,7 +1077,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1060,7 +1087,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
