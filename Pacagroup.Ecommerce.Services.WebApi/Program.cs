@@ -10,6 +10,7 @@ using Pacagroup.Ecommerce.Services.WebApi.Modules.Swagger;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Validator;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Versioning;
 using Pacagroup.Ecommerce.Services.WebApi.Modules.Watch;
+using Pacagroup.Ecommerce.Services.WebApi.Modules.Redis;
 using WatchDog;
 #endregion
 
@@ -27,6 +28,7 @@ builder.Services.AddSwagger();//SwaggerExtensiones
 builder.Services.AddValidator();
 builder.Services.AddHealthCheck(builder.Configuration);
 builder.Services.AddWatchDog(builder.Configuration);
+builder.Services.AddRedisCache(builder.Configuration);
 
 var app = builder.Build();
 
