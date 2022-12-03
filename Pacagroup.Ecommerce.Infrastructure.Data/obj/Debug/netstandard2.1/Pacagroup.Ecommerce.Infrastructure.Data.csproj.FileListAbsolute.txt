@@ -1,13 +1,10 @@
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.deps.json
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.dll
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.pdb
-F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Transversal.Common.dll
-F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\bin\Debug\netstandard2.1\Pacagroup.Ecommerce.Transversal.Common.pdb
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.csproj.AssemblyReference.cache
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.GeneratedMSBuildEditorConfig.editorconfig
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.AssemblyInfoInputs.cache
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.AssemblyInfo.cs
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.csproj.CoreCompileInputs.cache
-F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.csproj.CopyComplete
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.dll
 F:\Udemy\Arquitectura\Pacagroup.Ecommerce\Pacagroup.Ecommerce.Infrastructure.Data\obj\Debug\netstandard2.1\Pacagroup.Ecommerce.Infrastructure.Data.pdb
